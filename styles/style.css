@@ -1,0 +1,85 @@
+@font-face{
+    font-family: 'museo';
+    src: url(./fonts/exljbris\ -\ MuseoSans-300.otf)
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    background-color: #76CDD8;
+    height: 100vh;
+    font-family: 'museo';
+}
+header {
+    width: 100%;
+    background-color: #D35D47;
+    text-align: center;
+    line-height: 40px;
+    height: 60px;
+}
+h1 {
+    color: #ffffff;
+    padding: 10px;
+}
+sup{
+    font-size: 50%;
+}
+.section{
+    padding: 10px;
+    width: 600px;
+    align-self: center;
+
+}
+article{
+    background-color: #C9DB48;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+article > button{
+    display: block;
+    width: 150px;
+    height: 50px;;
+    margin:10px auto;
+    background-color: #76CDD8;
+    color: #ffffff;
+}
+article>span{
+    font-size: 26px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+    padding: 10px 0px;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+.section > .content{
+    display: none;
+}
+.section.active > .content {
+    display: block;
+}
+#sizeSS, #sizeLS {
+    display: block !important;
+}
+footer {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: #D35D47;
+    text-align: center;
+    line-height: 40px;
+    bottom:0;
+    color: #ffffff;
+}
