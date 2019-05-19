@@ -1,6 +1,6 @@
 # webstorage
 
-## Here you can finde info about:
+## Here you can find info about:
  - LocalStorge;
  - SessionStorage;
  - Cookies;
