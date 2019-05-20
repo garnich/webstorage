@@ -83,3 +83,25 @@ footer {
     bottom:0;
     color: #ffffff;
 }
+button {
+    height: 40px;
+    width: 80px;
+    border: 1px solid #ffffff;
+    background-color: #D35D47;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+}
+.buttonSize:hover::after { 
+    content: attr(data-title); 
+    position: absolute; 
+    left: -280%; 
+    top: -120%; 
+    z-index: 1; 
+    background: #D35D47; 
+    font-size: 18px;
+    padding: 10px 20px; 
+    border: 2px solid #ffffff;
+    opacity: .8;
+}

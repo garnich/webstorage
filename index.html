@@ -31,7 +31,8 @@
                     <path id="svg_8" fill="#fff559" d="m272.5625,444.42188c0,14.85546 -12.03906,26.89453 -26.89062,26.89453s-26.89454,-12.03907 -26.89454,-26.89453c0,-14.85157 12.04297,-26.89063 26.89454,-26.89063s26.89062,12.03906 26.89062,26.89063zm0,0"/>
                     <path id="svg_9" fill="#f4ca00" d="m272.5625,444.42188c0,-14.85157 -12.03906,-26.89063 -26.89062,-26.89063l0,53.78516c14.85156,0 26.89062,-12.04297 26.89062,-26.89453zm0,0"/>
                 </svg>
-        </section>
+                <br>
+            </section>
         <section class="content-section">
             <article class="ls section">
                 <span>LocalStorage</span>
@@ -42,9 +43,8 @@
                         <li>Data is never transferred to the server</li>
                         <li>Storage limit is at least 5MB</li>
                     </ul>   
-                    <button onclick="localStorageSize()" id="lssize">SIZE</button>   
-                    <button onclick="localStorage.clear(), event.stopPropagation()">Clear</button>                
-                    <span id="sizeLS"></span>   
+                    <button onclick="localStorageSize()" id="lssize" class="buttonSize" data-title="Synchronous operation!!!">Size</button>   
+                    <button onclick="clearLocalStorage()">Clear</button>          
                 </div>
             </article>
             <article class="ss section">
@@ -56,9 +56,8 @@
                         <li>Data is never transferred to the server</li>
                         <li>Storage limit is at least 5MB</li>
                     </ul>
-                    <button onclick="sessionStorageSize()" id="sssize">SIZE</button>
-                    <button onclick="sessionStorage.clear(), event.stopPropagation()">Clear</button>                
-                    <span id="sizeSS"></span>
+                    <button onclick="sessionStorageSize()" id="sssize" class="buttonSize" data-title="Synchronous operation!!!">Size</button>
+                    <button onclick="clearSessionStorage()">Clear</button>       
                 </div>
             </article>      
             <article class="cookies section">
@@ -82,10 +81,10 @@
                 </div>
             </article>
         </section>            
-    </div>  
-            <footer>
-                <span>Minsk, 2019</span>
-            </footer>  
+    </div>
+    <footer>
+        <span>Minsk, 2019</span>
+    </footer>  
     <script src="./scripts/index.js"></script>
 </body>
 </html>

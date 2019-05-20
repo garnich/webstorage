@@ -3,9 +3,7 @@ function gen(n) {
 }
 function sessionStorageSize(){
     event.stopPropagation();
-    // var sizeButton = document.querySelector('#sssize');        
-    //         var ss = document.querySelector('.contentss'); 
-    //         ss.removeChild(sizeButton); 
+
     // Determine size of localStorage if it's not set
     if (!sessionStorage.getItem('size')) {
         var i = 0;
@@ -18,19 +16,14 @@ function sessionStorageSize(){
         } catch (e) {
             sessionStorage.removeItem('test');
             sessionStorage.setItem('size', i ? i - 250 : 0);
-            let el = document.getElementById('sizeSS');    
-            el.style.display = 'inline-block';    
-            el.innerHTML = 'current size : ' +( i ? (i - 250)/1000 + 'Mb' : 0 + 'Mb' );
-                   
+            document.querySelector('#sssize').innerHTML = (i - 250)/1000 + 'Mb';
         }
     }
 }
 
 function localStorageSize(){
     event.stopPropagation();
-    // var sizeButton = document.querySelector('#lssize');        
-    //         var ss = document.querySelector('.contentls'); 
-    //         ss.removeChild(sizeButton); 
+
     // Determine size of localStorage if it's not set
     if (!localStorage.getItem('size')) {
         var i = 0;
@@ -43,12 +36,22 @@ function localStorageSize(){
         } catch (e) {
             localStorage.removeItem('test');
             localStorage.setItem('size', i ? i - 250 : 0);
-            let el = document.getElementById('sizeLS');    
-            el.style.display = 'inline-block';    
-            el.innerHTML = 'current size : ' +( i ? (i - 250)/1000 + 'Mb' : 0 + 'Mb' );
-                   
+            document.querySelector('#lssize').innerHTML = (i - 250)/1000 + 'Mb'; 
         }
     }
+}
+
+function clearSessionStorage (){
+    event.stopPropagation();
+    sessionStorage.clear();
+    document.querySelector('#sssize').innerHTML = 'Size';                  
+}
+
+function clearLocalStorage (){
+    event.stopPropagation();
+    localStorage.clear();
+    document.querySelector('#lssize').innerHTML = 'Size';                  
+            
 }
 
 let title = document.getElementsByClassName('section');
