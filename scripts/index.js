@@ -65,13 +65,13 @@ document.body.addEventListener('click', function(event){
         }
         target.classList.add('active');                    
     };
-    if (target.tagName == 'SPAN') {
+    if (target.tagName == 'H2') {
         for (let i = 0; i < articles.length; i++) {
             articles[i].classList.remove('active');
         }
         target.closest('.section').classList.add('active');
     } 
-    if (target.tagName !== 'SPAN' && target.tagName !== 'ARTICLE') {
+    if (target.tagName !== 'H2' && target.tagName !== 'ARTICLE') {
         for (let i = 0; i < articles.length; i++) {
             articles[i].classList.remove('active');
         }
