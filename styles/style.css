@@ -35,42 +35,40 @@ h1 {
 sup{
     font-size: 50%;
 }
-.data{
+main{
+    align-items: center;
     box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     min-height: 100%;
     padding-bottom: 40px;
     padding-top: 70px;
 }
-.maincontent{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    height: 100%;
-    padding-top: 4%;
+.animation{
+    height: 230px;;
+
 }
-.section{
+details{
     align-self: center;
-    padding: 10px;
-    width: 600px;
-}
-article{
     background-color: #C9DB48;
     cursor: pointer;
     margin: 5px;
+    padding: 10px;
     text-align: center;
+    width: 600px;
 }
-article>h2{
+summary:focus{
+    outline: none;
+}
+summary::-webkit-details-marker {
+    display: none;
+}
+summary{
     color: #ffffff;
-    cursor: pointer;
     font-size: 26px;
     font-weight: bold;
     text-align: center;
-}
-.section > .content{
-    display: none;
-}
-.section.active > .content {
-    display: block;
 }
 ul{
     list-style: none;

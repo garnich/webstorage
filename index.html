@@ -14,9 +14,8 @@
         <header>
             <h1>WebStorage <sup>demo</sup></h1>
         </header>
-        <div class="data">
-            <div class="maincontent">
-                <div class="animation">
+            <main>
+                <article class="animation">
                     <svg height="256" viewBox="0 0 512 512" width="256" xmlns="http://www.w3.org/2000/svg">
                         <path stroke="null" id="svg_1" fill="#bbdcff" d="m445.904584,385.220264c-8.190004,0 -14.82774,6.71875 -14.82774,15l0,16.50391l-41.594896,0c-8.186148,0 -14.82774,6.71484 -14.82774,15c0,8.28125 6.641592,15 14.82774,15l41.594896,0l0,15.55859c0,8.28125 6.637737,15 14.82774,15c8.190013,0 14.82774,-6.71875 14.82774,-15l0,-62.0625c0,-8.28125 -6.637727,-15 -14.82774,-15zm0,0"/>
                         <path id="svg_2" fill="#c57a44" d="m411.19141,494.875l-68.95703,-482c-1.0586,-7.38672 -7.38672,-12.875 -14.85157,-12.875l-163.42187,0c-7.46485,0 -13.79297,5.48828 -14.85156,12.875l-68.95704,482c-0.61718,4.30469 0.66407,8.66406 3.51563,11.94922c2.84766,3.28906 6.98437,5.17578 11.33203,5.17578l301.34375,0c4.34766,0 8.48438,-1.89063 11.33203,-5.17578c2.84766,-3.28516 4.13281,-7.64453 3.51563,-11.94922zm0,0"/>
@@ -33,57 +32,48 @@
                         <path id="svg_8" fill="#fff559" d="m272.5625,444.42188c0,14.85546 -12.03906,26.89453 -26.89062,26.89453s-26.89454,-12.03907 -26.89454,-26.89453c0,-14.85157 12.04297,-26.89063 26.89454,-26.89063s26.89062,12.03906 26.89062,26.89063zm0,0"/>
                         <path id="svg_9" fill="#f4ca00" d="m272.5625,444.42188c0,-14.85157 -12.03906,-26.89063 -26.89062,-26.89063l0,53.78516c14.85156,0 26.89062,-12.04297 26.89062,-26.89453zm0,0"/>
                     </svg>
-                </div>
-                <div class="content-section">
-                    <article class="ls section">
-                        <h2>LocalStorage</h2>
-                        <div class="content contentls">
+                </article>
+                <article class="content">
+                    <details>
+                        <summary>LocalStorage</summary>
                             <ul>
                                 <li>Locally Stored Data</li>
                                 <li>Stores data with no expiration date</li>
                                 <li>Data is never transferred to the server</li>
                                 <li>Storage limit is at least 5MB</li>
                             </ul>   
-                            <button onclick="localStorageSize()" id="lssize" class="buttonSize" data-title="Synchronous operation!!!">Size</button>   
-                            <button onclick="clearLocalStorage()">Clear</button>          
-                        </div>
-                    </article>
-                    <article class="ss section">
-                        <h2>SessionStorage</h2>                
-                        <div class="content contentss">
-                            <ul>
-                                <li>Locally Stored Data</li>
-                                <li>The sessionStorage object stores data only for a session</li>
-                                <li>Data is never transferred to the server</li>
-                                <li>Storage limit is at least 5MB</li>
-                            </ul>
-                            <button onclick="sessionStorageSize()" id="sssize" class="buttonSize" data-title="Synchronous operation!!!">Size</button>
-                            <button onclick="clearSessionStorage()">Clear</button>       
-                        </div>
-                    </article>      
-                    <article class="cookies section">
-                        <h2>Cookies</h2>                
-                        <div class="content">
-                            <ul>
-                                <li>Stores data that has to be sent back to the server with subsequent requests.</li>
-                                <li>Primarily for server-side reading (can be read on client)</li>
-                                <li>Size less than 4KB</li>
-                            </ul>
-                        </div>
-                    </article>        
-                    <article class="idb section">
-                        <h2>IndexedDB</h2>                
-                        <div class="content">
-                            <ul>
-                                <li>Key/value storage: value can be (almost) anything</li>
-                                <li>Is intended for offline apps</li>
-                                <li>Storage limit is calculated as 50% of free disk space</li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>            
-            </div>
-        </div>
+                        <button onclick="localStorageSize()" id="lssize" class="buttonSize" data-title="Synchronous operation!!!">Size</button>   
+                        <button onclick="clearLocalStorage()">Clear</button>       
+                    </details>
+                    <details>
+                        <summary>SessionStorage</summary>
+                        <ul>
+                            <li>Locally Stored Data</li>
+                            <li>Stores data with no expiration date</li>
+                            <li>Data is never transferred to the server</li>
+                            <li>Storage limit is at least 5MB</li>
+                        </ul>   
+                        <button onclick="localStorageSize()" id="lssize" class="buttonSize" data-title="Synchronous operation!!!">Size</button>   
+                        <button onclick="clearLocalStorage()">Clear</button>       
+                    </details>
+                    <details>
+                        <summary>Cookies</summary>
+                        <ul>
+                            <li>Stores data that has to be sent back to the server with subsequent requests.</li>
+                            <li>Primarily for server-side reading (can be read on client)</li>
+                            <li>Size less than 4KB</li>
+                        </ul>      
+                    </details>
+                    <details>
+                        <summary>IndexedDB</summary>
+                        <ul>
+                            <li>Key/value storage: value can be (almost) anything</li>
+                            <li>Is intended for offline apps</li>
+                            <li>Storage limit is calculated as 50% of free disk space</li>
+                        </ul>       
+                    </details>                    
+                </article>            
+            </main>
         <footer>
             <span>Minsk, 2019</span>
         </footer>
