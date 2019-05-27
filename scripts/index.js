@@ -1,10 +1,11 @@
 function gen(n) {
     return new Array((n * 1024) + 1).join('a')
 }
+
 function sessionStorageSize(){
     event.stopPropagation();
 
-    // Determine size of localStorage if it's not set
+    // Determine size of sessionStorage if it's not set
     if (!sessionStorage.getItem('size')) {
         var i = 0;
         try {
@@ -54,27 +55,7 @@ function clearLocalStorage (){
             
 }
 
-let title = document.getElementsByClassName('section');
-
 document.body.addEventListener('click', function(event){
-    let target = event.target;
-    let articles = document.getElementsByClassName('section');
-    if (target.tagName == 'ARTICLE') {
-        for (let i = 0; i < articles.length; i++) {
-            articles[i].classList.remove('active');
-        }
-        target.classList.add('active');                    
-    };
-    if (target.tagName == 'H2') {
-        for (let i = 0; i < articles.length; i++) {
-            articles[i].classList.remove('active');
-        }
-        target.closest('.section').classList.add('active');
-    } 
-    if (target.tagName !== 'H2' && target.tagName !== 'ARTICLE') {
-        for (let i = 0; i < articles.length; i++) {
-            articles[i].classList.remove('active');
-        }
-    }
+    const dataItems = document.getElementsByTagName('summary');
+    [...dataItems].map(item => item.parentNode.removeAttribute('open'));
 });
-
