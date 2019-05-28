@@ -46,10 +46,9 @@ main{
     padding-top: 70px;
 }
 .animation{
-    height: 230px;;
-
+    height: 230px;
 }
-details{
+.section{
     align-self: center;
     background-color: #C9DB48;
     cursor: pointer;
@@ -58,14 +57,12 @@ details{
     text-align: center;
     width: 600px;
 }
-summary:focus{
-    outline: none;
-}
-summary::-webkit-details-marker {
+.hide{
     display: none;
 }
-summary{
+h2>a{
     color: #ffffff;
+    text-decoration: none;
     font-size: 26px;
     font-weight: bold;
     text-align: center;

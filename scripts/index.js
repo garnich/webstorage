@@ -55,7 +55,12 @@ function clearLocalStorage (){
             
 }
 
-document.body.addEventListener('click', function(event){
-    const dataItems = document.getElementsByTagName('summary');
-    [...dataItems].map(item => item.parentNode.removeAttribute('open'));
+document.querySelector('.content').addEventListener('click', function(event){
+    let target = event.target;
+    while(target != this){
+        if(target.tagName === 'H2'){
+            target.nextElementSibling.classList.toggle('hide');
+        };
+        target = target.parentNode;
+    }
 });
