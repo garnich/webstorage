@@ -45,22 +45,16 @@ function localStorageSize(){
 function clearSessionStorage (){
     event.stopPropagation();
     sessionStorage.clear();
-    document.querySelector('#sssize').innerHTML = 'Size';                  
+    document.querySelector('#sssize').innerHTML = 'Size';
 }
 
 function clearLocalStorage (){
     event.stopPropagation();
     localStorage.clear();
-    document.querySelector('#lssize').innerHTML = 'Size';                  
-            
+    document.querySelector('#lssize').innerHTML = 'Size';
 }
 
 document.querySelector('.content').addEventListener('click', function(event){
     let target = event.target;
-    while(target != this){
-        if(target.tagName === 'H2'){
-            target.nextElementSibling.classList.toggle('hide');
-        };
-        target = target.parentNode;
-    }
+    target.closest('.section').classList.toggle('open');
 });

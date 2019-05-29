@@ -57,10 +57,13 @@ main{
     text-align: center;
     width: 600px;
 }
-.hide{
+.section > .section_data{
     display: none;
 }
-h2>a{
+.section.open > .section_data{
+    display: block;
+}
+h2 > a{
     color: #ffffff;
     text-decoration: none;
     font-size: 26px;
